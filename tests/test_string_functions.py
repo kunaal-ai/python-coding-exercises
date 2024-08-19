@@ -1,6 +1,7 @@
 from typing import Literal
 import pytest
 import string_problems.reverse_string as rs
+import string_problems.palindrome_string as ps
 
 
 class TestReverseString:
@@ -48,3 +49,17 @@ class TestReverseString:
         with pytest.raises(TypeError, match="DataType not string"):
             response = rs.ReverseString(123456)
             response.reverse_the_string()
+
+
+class TestPalindromeString:
+
+    @pytest.mark.parametrize(
+        "test_input, expected",
+        [
+            ("121", True),
+            ("Test", False),
+        ],
+    )
+    def test_is_palindrome(self, test_input, expected):
+        response = ps.PalindromeString(test_input)
+        assert response.is_palindrome() is expected

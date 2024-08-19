@@ -41,6 +41,7 @@ class ReverseString:
         return final_string
 
 
-obj = ReverseString("TestGuardian")
-RESPONSE = obj.reverse_the_string()
-print(f"Reversed String is {RESPONSE}")
+if __name__ == "__main__":
+    obj = ReverseString("TestGuardian")
+    response = obj.reverse_the_string()
+    print(f"Reversed String is {response}")

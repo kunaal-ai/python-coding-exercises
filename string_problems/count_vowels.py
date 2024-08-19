@@ -27,6 +27,7 @@ class CountVowels:
         return no_of_vowels
 
 
-obj = CountVowels("Test 9 Guardian")
-RESPONSE = obj.count_total_vowels()
-print(f"Total number of vowels : {RESPONSE}")
+if __name__ == "__main__":
+    obj = CountVowels("Test 9 Guardian")
+    response = obj.count_total_vowels()
+    print(f"Total number of vowels : {response}")
