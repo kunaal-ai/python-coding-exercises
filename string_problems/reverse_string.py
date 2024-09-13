@@ -25,6 +25,8 @@ class ReverseString:
             raise TypeError("DataType not string")
         if raw_value == "":
             raise ValueError("Given string is empty")
+        if raw_value == " ":
+            raise ValueError("Given string is empty")
 
     def reverse_the_string(self):
         """
