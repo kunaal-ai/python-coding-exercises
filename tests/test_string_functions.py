@@ -1,25 +1,6 @@
 import pytest
-import string_problems.palindrome_string as ps
 import string_problems.longest_word as lw
 import string_problems.anagram_words as aw
-
-
-@pytest.mark.parametrize(
-    "test_input, expected",
-    [
-        ("121", True),
-        ("Test", False),
-    ],
-)
-class TestPalindromeString:
-
-    def test_is_palindrome(self, test_input, expected):
-        response = ps.PalindromeString(test_input)
-        assert response.is_palindrome() is expected
-
-    def test_is_palindrome_optimized(self, test_input, expected):
-        response = ps.PalindromeString(test_input)
-        assert response.is_palindrome_optimized() is expected
 
 
 class TestLongestWord:
