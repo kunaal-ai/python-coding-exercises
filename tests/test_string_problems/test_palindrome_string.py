@@ -13,7 +13,6 @@ import string_problems.palindrome_string as ps
     ("12345", False)                  # Non-palindrome numeric string
 ])
 class TestPalindrome:
-
     def test_is_palindrom(self, test_input, expected_output):
         response = ps.PalindromeString(test_input)
         assert response.is_palindrome() == expected_output
