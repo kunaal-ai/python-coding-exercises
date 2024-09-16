@@ -1,19 +1,5 @@
 import pytest
-import string_problems.longest_word as lw
 import string_problems.anagram_words as aw
-
-
-class TestLongestWord:
-    @pytest.mark.parametrize(
-        "test_input, expected",
-        [
-            ("This is the longest word in this string", "longest"),
-            ("a", "a"),
-        ],
-    )
-    def test_find_longest_word(self, test_input, expected):
-        response = lw.LongestWord(test_input)
-        assert response.find_longest_word() == expected
 
 
 class TestAnagramWords:
@@ -24,5 +10,13 @@ class TestAnagramWords:
                                  ("", "silent", False)
                              ],)
     def test_is_anagram(self, test_input_a, test_input_b, expected):
+        """
+        Test if two words are anagrams using parameterized inputs.
+
+        Args:
+            test_input_a (str): First word to compare.
+            test_input_b (str): Second word to compare.
+            expected (bool): Expected result if the words are anagrams.
+        """
         response = aw.AnagramWords(test_input_a, test_input_b)
         assert response.is_anagram() == expected
