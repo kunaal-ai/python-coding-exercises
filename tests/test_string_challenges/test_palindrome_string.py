@@ -1,5 +1,5 @@
 import pytest
-import string_problems.palindrome_string as ps
+import string_challenges.palindrome_string as ps
 
 
 class TestPalindrome:

@@ -1,5 +1,5 @@
 import pytest
-import string_problems.longest_word as lw
+import string_challenges.longest_word as lw
 
 
 class TestLongestWord:

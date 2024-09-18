@@ -1,5 +1,5 @@
 import pytest
-import string_problems.reverse_string as rs
+import string_challenges.reverse_string as rs
 
 
 class TestReverseString:

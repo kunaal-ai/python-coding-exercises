@@ -1,5 +1,5 @@
 import pytest
-import string_problems.anagram_words as aw
+import string_challenges.anagram_words as aw
 
 
 class TestAnagramWords:
