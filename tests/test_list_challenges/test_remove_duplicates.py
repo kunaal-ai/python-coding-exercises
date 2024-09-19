@@ -33,7 +33,7 @@ class TestRemoveDuplicates:
             response.remove_duplicate_in_list()
 
     @pytest.mark.parametrize(
-        "invalid_input",
+        "test_input",
         [
             [1, 2, 3, "Test"],  # List containing a string
             [1, 2, None],  # List containing None
@@ -41,14 +41,14 @@ class TestRemoveDuplicates:
             "Not a list",  # Input is not a list
         ],
     )
-    def test_remove_duplicate_in_list(self, invalid_input):
+    def test_remove_duplicate_in_list(self, test_input):
         """test using invalid types in list
 
         Args:
-            invalid_input (list): list of various invalid data types
+            test_input (list): list of various invalid data types
         """
         with pytest.raises(TypeError, match="Invalid Type"):
-            response = rd.RemoveDuplicates(invalid_input)
+            response = rd.RemoveDuplicates(test_input)
             response.remove_duplicate_in_list()
 
     def test_remove_duplicates_init(self):
@@ -56,9 +56,6 @@ class TestRemoveDuplicates:
         different types of valid inputs."""
         response = rd.RemoveDuplicates([1, 2, 3])
         assert response.user_list == [1, 2, 3]
-
-        response = rd.RemoveDuplicates([])
-        assert response.user_list == []
 
     def test_remove_duplicates_large_list(self):
         """test with large inputs"""

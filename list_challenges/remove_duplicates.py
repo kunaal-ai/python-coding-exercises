@@ -11,6 +11,14 @@ class RemoveDuplicates:
             given_list (list): List to process.
         """
         self.user_list = given_list
+        self._validate_input()
+
+    def _validate_input(self) -> None:
+        if not self.user_list:
+            raise ValueError("Given list is empty")
+        
+        if not all(isinstance(i, int) for i in self.user_list):
+            raise TypeError("Invalid Type")
     
     def remove_duplicate_in_list(self) -> list:
         """
@@ -20,12 +28,6 @@ class RemoveDuplicates:
             list: List with duplicates removed.
         """
         len_user_list = len(self.user_list)
-        if len_user_list == 0:
-            raise ValueError("Given list is empty")
-        
-        for i in self.user_list:
-            if not isinstance(i, int):
-                raise TypeError("Invalid Type")
         
         if len_user_list == 1:
             return self.user_list
