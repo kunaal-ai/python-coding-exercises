@@ -1,6 +1,5 @@
 ✅ Implement a program to remove duplicates from a list.
 ✅ Create a function to find the largest number in a list.
-✅ Write a Python program to multiply all the elements in a list.
 ✅ Implement a function to reverse a list without using any built-in functions.
 ✅ Write a program to sort a list of integers in ascending order.
 ✅ Create a function to find the average of elements in a list.
